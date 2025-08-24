@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Developer Roadmap</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .phase {
+            margin-bottom: 40px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .phase-header {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .phase-header:hover {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+        }
+        .phase-content {
+            padding: 20px;
+            display: block;
+        }
+        .timeline {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .skill-group {
+            margin-bottom: 20px;
+        }
+        .skill-group h4 {
+            color: #34495e;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .skill-item:hover {
+            background: #e9ecef;
+        }
+        .skill-item input[type="checkbox"] {
+            margin-right: 12px;
+            transform: scale(1.2);
+        }
+        .skill-item.completed {
+            background: #d4edda;
+            text-decoration: line-through;
+            opacity: 0.8;
+        }
+        .priority {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .priority.high {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        .resources {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .resources h4 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        .project-card {
+            background: #f0f8ff;
+            border: 1px solid #b3d9ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .project-card h4 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        .phase-toggle {
+            float: right;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Software Developer Roadmap</h1>
+        <p class="subtitle">Final Year Student | MERN + C++ Background</p>
+        
+        <div class="progress-bar">
+            <div class="progress" id="overallProgress"></div>
+        </div>
+        <p style="text-align: center; margin-bottom: 30px;"><span id="progressText">0% Complete</span></p>
+
+        <!-- Phase 1: Foundation Strengthening -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase1')">
+                Phase 1: Foundation Strengthening <span class="phase-toggle">▼</span>
+            </div>
+            <div class="phase-content" id="phase1">
+                <div class="timeline">⏱️ Timeline: Next 2-3 months</div>
+                
+                <div class="priority high">
+                    <strong>🎯 Priority Focus:</strong> Build strong fundamentals for interviews and real-world development
+                </div>
+
+                <div class="skill-group">
+                    <h4>📚 Computer Science Fundamentals</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Data Structures & Algorithms (LeetCode Medium level)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>System Design Basics (Scalability, Load Balancing)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Database Design & Optimization</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Operating Systems Concepts</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>🔧 Technical Skills Enhancement</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Advanced JavaScript (ES6+, Async/Await, Closures)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>TypeScript fundamentals</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Git/GitHub advanced features (rebasing, merge conflicts)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Testing (Jest, React Testing Library)</span>
+                    </div>
+                </div>
+
+                <div class="resources">
+                    <h4>📖 Recommended Resources</h4>
+                    <ul>
+                        <li>LeetCode, HackerRank for DSA practice</li>
+                        <li>"You Don't Know JS" series for JavaScript deep dive</li>
+                        <li>System Design Primer (GitHub)</li>
+                        <li>FreeCodeCamp advanced courses</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 2: Portfolio Development -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase2')">
+                Phase 2: Portfolio Development <span class="phase-toggle">▼</span>
+            </div>
+            <div class="phase-content" id="phase2">
+                <div class="timeline">⏱️ Timeline: 3-4 months</div>
+                
+                <div class="priority">
+                    <strong>🎯 Goal:</strong> Build 3-4 impressive projects that showcase different skills
+                </div>
+
+                <div class="project-card">
+                    <h4>Project 1: Full-Stack E-commerce App</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>User authentication & authorization</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Payment integration (Stripe/PayPal)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Admin dashboard with analytics</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Deploy to production (Vercel/Netlify + Heroku)</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4>Project 2: Real-time Chat Application</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>WebSocket implementation (Socket.io)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Group chats, file sharing</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Message encryption & security</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4>Project 3: Data Visualization Dashboard</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>API integration (REST/GraphQL)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Interactive charts (D3.js/Chart.js)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Real-time data updates</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4>Project 4: Algorithm Visualizer (C++ Skills)</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Sorting & searching algorithm animations</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Graph algorithms visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 3: Professional Preparation -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase3')">
+                Phase 3: Professional Preparation <span class="phase-toggle">▼</span>
+            </div>
+            <div class="phase-content" id="phase3">
+                <div class="timeline">⏱️ Timeline: 2-3 months (parallel with Phase 2)</div>
+                
+                <div class="skill-group">
+                    <h4>💼 Career Preparation</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Polish LinkedIn profile with projects</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Create impressive GitHub profile README</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Build personal portfolio website</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Write technical blog posts (Medium/Dev.to)</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>🎯 Interview Preparation</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Practice coding interviews (200+ problems)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>System design interview prep</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Behavioral interview preparation (STAR method)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Mock interviews with peers/platforms</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>🌐 Networking & Experience</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Contribute to open source projects</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Attend tech meetups/conferences</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Apply for internships/part-time roles</span>
+                    </div>
+                </div>
+
+                <div class="resources">
+                    <h4>🎯 Interview Resources</h4>
+                    <ul>
+                        <li>Cracking the Coding Interview</li>
+                        <li>Pramp, InterviewBit for mock interviews</li>
+                        <li>Glassdoor for company-specific questions</li>
+                        <li>System Design Interview books</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 4: Specialization & Job Search -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase4')">
+                Phase 4: Specialization & Job Search <span class="phase-toggle">▼</span>
+            </div>
+            <div class="phase-content" id="phase4">
+                <div class="timeline">⏱️ Timeline: 6-12 months (graduation & beyond)</div>
+                
+                <div class="skill-group">
+                    <h4>🎯 Choose Your Path (Pick 1-2)</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Frontend Specialist: Advanced React, Next.js, UI/UX</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Backend Specialist: Microservices, Docker, AWS/Azure</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>DevOps: CI/CD, Kubernetes, Cloud platforms</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Mobile Development: React Native or Flutter</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>🔍 Job Search Strategy</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Apply to 5-10 companies per week</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Tailor resume for each application</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Follow up on applications</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Network with professionals in target companies</span>
+                    </div>
+                </div>
+
+                <div class="priority">
+                    <strong>💡 Pro Tip:</strong> Start applying 2-3 months before graduation. Many companies hire for fresh graduate positions in advance.
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Metrics -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('metrics')">
+                🏆 Success Metrics <span class="phase-toggle">▼</span>
+            </div>
+            <div class="phase-content" id="metrics">
+                <div class="skill-group">
+                    <h4>📊 Track Your Progress</h4>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Can solve LeetCode Medium problems in 30 minutes</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>3+ impressive projects deployed and documented</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Received positive feedback from mock interviews</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Active GitHub with consistent contributions</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Strong professional network (50+ LinkedIn connections)</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox" onchange="updateProgress()">
+                        <span>Job interviews scheduled with target companies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePhase(phaseId) {
+            const content = document.getElementById(phaseId);
+            const header = content.previousElementSibling;
+            const toggle = header.querySelector('.phase-toggle');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                toggle.textContent = '▼';
+            } else {
+                content.style.display = 'none';
+                toggle.textContent = '▶';
+            }
+        }
+
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const completed = document.querySelectorAll('input[type="checkbox"]:checked');
+            const percentage = Math.round((completed.length / checkboxes.length) * 100);
+            
+            document.getElementById('overallProgress').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = percentage + '% Complete';
+            
+            // Update completed items styling
+            checkboxes.forEach(checkbox => {
+                const skillItem = checkbox.closest('.skill-item');
+                if (checkbox.checked) {
+                    skillItem.classList.add('completed');
+                } else {
+                    skillItem.classList.remove('completed');
+                }
+            });
+        }
+
+        // Initialize progress on page load
+        updateProgress();
+    </script>
+</body>
+</html>
